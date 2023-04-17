@@ -10,6 +10,11 @@ class Solution3 {
         int d_x = 0;
         int d_y = 0;
 
+        int[] dx = {-1,0,1,0};
+        int[] dy = {0,1,0,-1};
+        int d1 = 0;
+        int d2 = 0;
+
         int n = board.length;
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
@@ -23,8 +28,7 @@ class Solution3 {
                 }
             }
         }
-        System.out.println("h_x = " + h_x + " h_y = " + h_y);
-        System.out.println("d_x = " + d_x + " d_y = " + d_y);
+
 
 
         return answer;
