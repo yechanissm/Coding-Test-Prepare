@@ -11,17 +11,17 @@ public class 유한소수판별하기 {
        }
     }
     public static int solution(int a, int b) {
-        int B = b / gcd(a,b);
-        while( B != 1) {
-            if(B%2 == 0) {
-                B /= 2;
-            }
-            else if(B % 5 == 0) {
+        b /= gcd(a, b);
+        while (b != 1) {
+            if (b % 5 == 0) {
                 b /= 5;
+                continue;
             }
-            else {
-                return 2;
+            if (b % 2 == 0) {
+                b /= 2;
+                continue;
             }
+            return 2;
         }
         return 1;
     }
