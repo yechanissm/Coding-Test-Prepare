@@ -14,6 +14,15 @@ public class 등수매기기 {
         for(int i=0; i<score.length; i++) {
             sum_array[i] = (score[i][0] + score[i][1])/2;
         }
-        System.out.println("sum_array = " + Arrays.toString(sum_array));
+        //등수 매기는 배열
+        for(int i=0; i<sum_array.length; i++) {
+            answer[i] = 1;
+            for(int j=0; j<sum_array.length; j++) {
+                if(sum_array[i] < sum_array[j]) {
+                    answer[i] ++;
+                }
+            }
+        }
+        System.out.println("Arrays.toString(answer) = " + Arrays.toString(answer));
     }
 }
