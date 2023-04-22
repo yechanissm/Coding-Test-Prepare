@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class 등수매기기 {
 
     public static void main(String[] args) {
-        int[][] score = {{80,70}, {90,50}, {40,70}};
+        int[][] score = {{1,2}, {1,1}, {1,1}};
 
 
         int[] sum_array = new int[score.length];
@@ -13,7 +13,7 @@ public class 등수매기기 {
 
         //우선 합을 먼저 계산해야 한다. 그걸 배열로 만들어보자.
         for(int i=0; i<score.length; i++) {
-            sum_array[i] = (score[i][0] + score[i][1])/2;
+            sum_array[i] = (score[i][0] + score[i][1]);
         }
         //등수 매기는 배열
         for(int i=0; i<sum_array.length; i++) {
