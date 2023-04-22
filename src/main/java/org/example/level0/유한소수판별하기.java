@@ -4,7 +4,17 @@ public class 유한소수판별하기 {
 
     public static int solution(int a, int b) {
         int answer = 0;
-        return answer;
+
+        for(int i=1; i<b; i++) {
+            if(a % i == 0 ) {
+                if (b % (a/i) == 0) {
+                    return 1;
+                }
+            }
+
+        }
+        return 2;
+
     }
 
     public static void main(String[] args) {
