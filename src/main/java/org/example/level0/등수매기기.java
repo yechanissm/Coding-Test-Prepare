@@ -1,6 +1,4 @@
-package org.example.class1;
-
-import java.util.Arrays;
+package org.example.level0;
 
 public class 등수매기기 {
 
@@ -24,6 +22,8 @@ public class 등수매기기 {
                 }
             }
         }
-        System.out.println("Arrays.toString(answer) = " + Arrays.toString(answer));
+
+
+
     }
 }
