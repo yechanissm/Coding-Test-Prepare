@@ -6,11 +6,21 @@ public class 없는숫자더하기 {
     static int solution(int[] numbers){
         int answer = 0;
         for(int i=1; i<=9; i++) {
-            boolean result = checking(i, numbers);
+            if(checking(i, numbers)){
+                answer+=i;
+            }
         }
         return answer;
     }
 
+    private static boolean checking(int i, int[] numbers) {
+        boolean result = true;
+        for(int a: numbers)
+            if(a==i) {
+                result = false;
+            }
+        return result;
+    }
 
     public static void main(String[] args) {
         int[] numbers1 = {1,2,3,4,6,7,8,0};
