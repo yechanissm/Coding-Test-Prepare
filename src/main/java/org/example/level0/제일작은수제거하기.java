@@ -18,8 +18,17 @@ public class 제일작은수제거하기 {
             }
         }
         //최소값을 제외한 값들을 리스트에 넣기
-
-
+        int[] answer;
+        if(list.isEmpty()) {
+            answer = new int[1] {-1};
+        }
+        else {
+            answer = new int[list.size()];
+            for(int i=0; i<list.size(); i++) {
+                answer[i] = list.get(i);
+            }
+        }
+        //리스트가 비어있으면 -1 아니면 값을 넣어준다.
     }
 
     public static void main(String[] args) {
