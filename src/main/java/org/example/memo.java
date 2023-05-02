@@ -12,5 +12,6 @@ public class memo {
         List<Integer> list = new ArrayList<>();
         int[] a = {1,23,4,5};
         int[] clone = a.clone();
+
     }
 }
