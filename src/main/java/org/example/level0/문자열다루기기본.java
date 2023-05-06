@@ -4,7 +4,16 @@ public class 문자열다루기기본 {
 
     static boolean solution(String s) {
         boolean answer = false;
-
+        int length = s.length();
+        char[] chars = s.toCharArray();
+        if(length==4 || length==6){
+            answer = true;
+        }
+        for(char c : chars) {
+            if(!Character.isDigit(c)) {
+                return false;
+            }
+        }
         return answer;
     }
 
