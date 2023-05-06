@@ -13,7 +13,7 @@ public class 최대공약수와최소공배수 {
         int small = Math.min(n,m);
 
         answer[0] = gcd(big,small);
-
+        answer[1] = big*small / answer[0];
         return answer;
     }
     public static void main(String[] args) {
