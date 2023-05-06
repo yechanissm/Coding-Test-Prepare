@@ -5,16 +5,17 @@ public class 약수의개수와덧셈 {
         int answer = 0;
         int count = 0;
         for(int i=left; i<=right; i++) {
-            for(int j=1; j<=left; j++) {
-                if(left%i==0) {
+            for(int j=1; j<=i; j++) {
+                if(i%j==0) {
                     count++;
                 }
             }
+            System.out.println(count);
             if(count%2==0) {
-                answer += left;
+                answer += i;
             }
             else{
-                answer -= left;
+                answer -= i;
             }
             count =0;
         }
