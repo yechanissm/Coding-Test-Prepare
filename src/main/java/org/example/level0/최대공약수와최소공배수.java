@@ -1,5 +1,7 @@
 package org.example.level0;
 
+import java.util.Arrays;
+
 public class 최대공약수와최소공배수 {
     static int gcd(int big, int small) {
         if(big%small==0) {
@@ -21,7 +23,7 @@ public class 최대공약수와최소공배수 {
         int m = 12;
         int n1 = 2;
         int n2 = 5;
-        System.out.println(solution(n,m));
-        System.out.println(solution(n1,n2));
+        System.out.println(Arrays.toString(solution(n,m)));
+        System.out.println(Arrays.toString(solution(n1,n2)));
     }
 }
