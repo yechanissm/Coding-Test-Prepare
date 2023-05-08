@@ -9,10 +9,6 @@ import java.util.stream.Stream;
 
 public class memo {
     public static void main(String[] args) {
-        String t = "3141592";
-        String p = "271";
-        int len = t.length()>p.length() ? t.length(): p.length();
-        System.out.println(len);
-        t.sub
+
     }
 }
