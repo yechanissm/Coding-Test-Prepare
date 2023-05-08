@@ -1,15 +1,37 @@
 package org.example.level0;
 
+import java.util.Arrays;
+
 public class 비밀지도1차 {
 
     static String[] solution(int n, int[] arr1, int[] arr2) {
-        String[] answer = {};
+
         String[] binary_arr1 = binaryChange(arr1,n);
         String[] binary_arr2 = binaryChange(arr2,n);
 
         String[] change_arr1 = replaceChange(binary_arr1);
+        String[] change_arr2 = replaceChange(binary_arr2);
 
+        String[] answer = addArray(change_arr1, change_arr2);
 
+        return answer;
+    }
+
+    private static String[] addArray(String[] change_arr1, String[] change_arr2) {
+        String[] answer = new String[change_arr1.length];
+        for(int i=0; i<answer.length; i++) {
+            answer[i] = "";
+            String[] sen1 = change_arr1[i].split("");
+            String[] sen2 = change_arr2[i].split("");
+            for(int j=0; j<sen1.length; j++) {
+                if(sen1[j].equals("#") || sen2[j].equals("#")) {
+                    answer[i] += "#";
+                }
+                else{
+                    answer[i] += " ";
+                }
+            }
+        }
         return answer;
     }
 
@@ -23,15 +45,10 @@ public class 비밀지도1차 {
     }
 
     static String[] binaryChange(int[] arr, int n) {
-        String[] result = new String[5];
+        String[] result = new String[n];
         for(int i=0; i<result.length; i++) {
-            result[i] = Integer.toBinaryString(arr[i]);
-            int len = result[i].length();
-            if(len<5) {
-                for(int j=0; j<5-n; j++) {
-                    result[i] += "0" + result[i];
-                }
-            }
+            result[i] = String.format("%"+n+"s", Integer.parseInt(Integer.toBinaryString(arr[i])));
+
         }
         return result;
     }
@@ -40,6 +57,6 @@ public class 비밀지도1차 {
         int n= 5;
         int[] arr1 = {9,20,28,18,11};
         int[] arr2 = {30,1,21,17,28};
-        System.out.println(solution(n,arr1,arr2));
+        System.out.println(Arrays.toString(solution(n,arr1,arr2)));
     }
 }

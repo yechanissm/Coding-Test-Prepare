@@ -9,14 +9,10 @@ import java.util.stream.Stream;
 
 public class memo {
     public static void main(String[] args) {
-        char a = Character.toUpperCase('a');
-        System.out.println(a);
-
-        String s = " ";
-        String s1 = s.toLowerCase();
-        System.out.println(s1);
-        char c  = '}';
-        char b = 'k';
-        System.out.println(c>b);
+        String t = "3141592";
+        String p = "271";
+        int len = t.length()>p.length() ? t.length(): p.length();
+        System.out.println(len);
+        t.sub
     }
 }
