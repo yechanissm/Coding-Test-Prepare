@@ -12,5 +12,9 @@ public class memo {
         char a = Character.toUpperCase('a');
         System.out.println(a);
 
+        String s = " ";
+        String s1 = s.toLowerCase();
+        System.out.println(s1);
+
     }
 }

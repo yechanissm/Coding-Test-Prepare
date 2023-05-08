@@ -4,28 +4,29 @@ public class 이상한문자만들기 {
 
     static String solution(String s) {
         String answer = "";
-        String[] words = s.split(" ");
-        for (String word : words) {
-            for(int i=0; i<word.length(); i++) {
-                if(i%2==0) {
-                    char c = word.charAt(i);
-                    char c1 = Character.toUpperCase(c);
-                    answer+=c1;
-                }
-                else{
-                    char c = word.charAt(i);
-                    char c1 = Character.toLowerCase(c);
-                    answer+=c1;
-                }
+        int temp = 0;
+        String[] strs = s.split("");
+        for (String str : strs) {
+            if(str.equals(" ")) {
+                temp = 0;
+                answer += " ";
             }
-            answer += " ";
+            else if(temp%2==0) {
+                String s1 = str.toUpperCase();
+                answer+=s1;
+                temp++;
+            }
+            else {
+                String s1 = str.toLowerCase();
+                answer+=s1;
+                temp++;
+            }
         }
-        answer = answer.trim();
         return answer;
     }
 
     public static void main(String[] args) {
-        String s = "try hello world";
+        String s = "try hello world  ";
         System.out.println(solution(s));
     }
 }
