@@ -25,7 +25,13 @@ public class 비밀지도1차 {
     static String[] binaryChange(int[] arr, int n) {
         String[] result = new String[5];
         for(int i=0; i<result.length; i++) {
-            result[i] = String.format("%05d", Integer.parseInt(Integer.toBinaryString(arr[i])));
+            result[i] = Integer.toBinaryString(arr[i]);
+            int len = result[i].length();
+            if(len<5) {
+                for(int j=0; j<5-n; j++) {
+                    result[i] += "0" + result[i];
+                }
+            }
         }
         return result;
     }
