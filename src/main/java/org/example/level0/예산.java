@@ -6,7 +6,13 @@ public class 예산 {
 
     static int solution(int[] d, int budget){
         int answer =0;
-
+        Arrays.sort(d);
+        for(int dd : d) {
+            if(budget >= dd) {
+                budget-=dd;
+                answer++;
+            }
+        }
         return answer;
     }
     public static void main(String[] args) {
