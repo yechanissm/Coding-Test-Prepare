@@ -15,6 +15,8 @@ public class memo {
         String s = " ";
         String s1 = s.toLowerCase();
         System.out.println(s1);
-
+        char c  = '}';
+        char b = 'k';
+        System.out.println(c>b);
     }
 }
