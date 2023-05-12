@@ -10,6 +10,11 @@ public class 푸드파이트대회 {
                 answer += String.valueOf(i);
             }
         }
+        StringBuilder sb = new StringBuilder(answer);
+        String reverse = sb.reverse().toString();
+        answer += "0"+ reverse;
+
+        return answer;
     }
 
     public static void main(String[] args) {
