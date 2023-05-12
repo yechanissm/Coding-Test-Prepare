@@ -8,6 +8,9 @@ import java.util.stream.Stream;
 public class memo {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
-
+        String a = "dsada";
+        StringBuilder sb = new StringBuilder(a);
+        String s = sb.reverse().toString();
+        System.out.println(s);
     }
 }
