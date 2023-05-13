@@ -13,6 +13,5 @@ public class memo {
         String s = sb.reverse().toString();
         System.out.println(s);
         Map<String, Integer> map = new HashMap<>();
-        map.c
     }
 }
