@@ -12,6 +12,12 @@ public class memo {
         String substring = LocalDate.of(2016, 5, 24).getDayOfWeek().toString().substring(0, 3);
         System.out.println(substring);
         Map map = new HashMap();
+        String[][] photo = {{"may","kevin","kain","radi"},
+                {"may","kevin","fsd","dsfs"},
+                {"kon", "kain","may","coni"}};
+
+
+
 
     }
 }

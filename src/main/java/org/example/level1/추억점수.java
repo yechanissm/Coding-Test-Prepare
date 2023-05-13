@@ -12,6 +12,16 @@ public class 추억점수 {
         for(int i=0; i<name.length; i++){
             map.put(name[i], yearning[i]);
         }
+        int j=0;
+        for(String[] persons : photo) {
+            for(String person : persons) {
+                if(map.containsKey(person)) {
+                    result[j] += map.get(person);
+                }
+            }
+            j++;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
