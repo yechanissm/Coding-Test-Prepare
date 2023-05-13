@@ -1,12 +1,17 @@
 package org.example.level1;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class 추억점수 {
 
     static int[] solution(String[] name, int[] yearning, String[][] photo){
-
+        int[] result = new int[photo.length];
+        Map<String, Integer> map = new HashMap<>();
+        for(int i=0; i<name.length; i++){
+            map.put(name[i], yearning[i]);
+        }
     }
 
     public static void main(String[] args) {
