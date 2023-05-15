@@ -20,6 +20,9 @@ public class 모의고사 {
             }
         }
 
+        int max_price = Math.max(answer[0], Math.max(answer[1], answer[2]));
+
+
         return answer;
     }
     public static void main(String[] args) {
