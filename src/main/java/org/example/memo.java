@@ -16,8 +16,10 @@ public class memo {
                 {"may","kevin","fsd","dsfs"},
                 {"kon", "kain","may","coni"}};
         Map<Integer, Integer> map = new HashMap<>();
-        map.put(3,1);
-        map.put(3,2);
+        map.put(1,5);
+        map.put(2,0);
+        map.put(3,0);
+
         System.out.println(map);
 
 
