@@ -30,8 +30,9 @@ public class 모의고사 {
                 list.add(i+1);
             }
         }
+        int[] result = list.stream().mapToInt(i->i).toArray();
 
-        return answer;
+        return result;
     }
     public static void main(String[] args) {
         int[] answers1 =  {1,2,3,4,5};
