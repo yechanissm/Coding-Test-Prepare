@@ -1,7 +1,7 @@
 package org.example.level2.월간코드챌린지;
 
 import java.util.Stack;
-
+//스택 사용하는 문제
 public class 괄호회전하기 {
 
     private static final Stack<Character> stack = new Stack<>();

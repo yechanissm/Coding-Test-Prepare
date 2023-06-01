@@ -12,6 +12,7 @@ public class memo {
     public static void main(String[] args) {
 
 
+        String s= "asdsa";
 
 
 
