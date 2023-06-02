@@ -12,7 +12,7 @@ public class 괄호변환 {
         if(p.equals("")) {
             return "";
         }
-        StringBuilder sb = new StringBuilder(p);
+        StringBuilder sb = new StringBuilder();
         String[] tmp = splitString(p);
         String u = tmp[0];
         String v = tmp[1];
@@ -20,6 +20,25 @@ public class 괄호변환 {
         if(isCorrect(u)){
             sb.append(u).append(go(v));
         }
+        else {
+            sb.append('(').append(go(v)).append(')').append(removeAndReverse(u));
+        }
+        return sb.toString();
+    }
+
+    private static String removeAndReverse(String u) {
+        u = u.substring(1, u.length()-1);
+
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<u.length(); i++) {
+            if(u.charAt(i)=='(') {
+                sb.append(')');
+            }
+            else {
+                sb.append('(');
+            }
+        }
+        return sb.toString();
     }
 
     private static boolean isCorrect(String u) {
@@ -65,6 +84,5 @@ public class 괄호변환 {
         System.out.println(solution(p));
         System.out.println(solution(p2));
         System.out.println(solution(p3));
-        System.out.println(solution(")"));
     }
 }
