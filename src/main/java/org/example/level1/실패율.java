@@ -18,12 +18,15 @@ public class 실패율 {
                     up++;
                 }
             }
+            if(person==0 && up ==0) {
+                map.put(i, 0.0);
+                continue;
+            }
             rate = (double) up /person; //성공률
             person -= up; //남은 인원 변경
             up = 0; //스테이지에 머무른 인원 초기화
             stage++;//스테이지 한단계 증가
             map.put(i, rate);
-
         }
 
         List<Integer> key = new ArrayList<>(map.keySet());
@@ -35,10 +38,10 @@ public class 실패율 {
     public static void main(String[] args) {
         int N = 5;
         int[] stages = {2,1,2,6,2,4,3,3};
-        int[] stages2 = {3,3,3,3};
+        int[] stages2 = {4,1,2,3};
 
         System.out.println(Arrays.toString(solution(N, stages)));
-        System.out.println(Arrays.toString(solution(N, stages2)));
+        System.out.println(Arrays.toString(solution(4, stages2)));
 
     }
 }
