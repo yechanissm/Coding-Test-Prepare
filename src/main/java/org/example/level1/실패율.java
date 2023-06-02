@@ -17,13 +17,15 @@ public class 실패율 {
                 if(stages[j]==stage) {
                     up++;
                 }
-                rate = (double)up/person; //성공률
-                person -= up; //남은 인원 변경
-                up = 0; //스테이지에 머무른 인원 초기화
-                stage++;//스테이지 한단계 증가
-                map.put(i, rate);
             }
+            rate = (double) up /person; //성공률
+            person -= up; //남은 인원 변경
+            up = 0; //스테이지에 머무른 인원 초기화
+            stage++;//스테이지 한단계 증가
+            map.put(i, rate);
+
         }
+
         List<Integer> key = new ArrayList<>(map.keySet());
         //성공률 내림차순 정률 == 실패율 높은 차순 정렬
         Collections.sort(key, (v1,v2) -> map.get(v2).compareTo(map.get(v1)));
