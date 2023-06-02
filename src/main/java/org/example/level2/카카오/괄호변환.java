@@ -17,7 +17,25 @@ public class 괄호변환 {
         String u = tmp[0];
         String v = tmp[1];
 
-        return v;
+        if(isCorrect(u)){
+            sb.append(u).append(go(v));
+        }
+    }
+
+    private static boolean isCorrect(String u) {
+        Stack<Character> st = new Stack<>();
+        for(int i=0; i<u.length(); i++) {
+            if(u.charAt(i)=='(') {
+                st.push('(');
+            }
+            else {
+                if(st.isEmpty()) {
+                    return false;
+                }
+                st.pop();
+            }
+        }
+        return st.isEmpty();
     }
 
     private static String[] splitString(String p) {
