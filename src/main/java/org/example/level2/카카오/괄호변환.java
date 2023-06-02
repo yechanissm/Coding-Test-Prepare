@@ -17,7 +17,7 @@ public class 괄호변환 {
         String u = tmp[0];
         String v = tmp[1];
 
-        return u;
+        return v;
     }
 
     private static String[] splitString(String p) {
@@ -31,12 +31,8 @@ public class 괄호변환 {
             }
             if(key==0) {
                 String u = p.substring(0,i+1);
-                String v = "";
-                if(p.length()>= i+1){
-                    System.out.println(p.length());
-                    System.out.println(p);
-                    v = p.substring(i+1);
-                }
+                String v = p.substring(i+1);
+
                 return new String[] {u,v};
             }
         }
@@ -51,5 +47,6 @@ public class 괄호변환 {
         System.out.println(solution(p));
         System.out.println(solution(p2));
         System.out.println(solution(p3));
+        System.out.println(solution(")"));
     }
 }
