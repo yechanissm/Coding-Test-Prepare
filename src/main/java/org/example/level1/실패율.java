@@ -38,10 +38,12 @@ public class 실패율 {
     public static void main(String[] args) {
         int N = 5;
         int[] stages = {2,1,2,6,2,4,3,3};
-        int[] stages2 = {4,1,2,3};
+        int[] stages2 = {4,4,4,4,4};
+        int[] stages3 = {3,3,3,3};
 
         System.out.println(Arrays.toString(solution(N, stages)));
         System.out.println(Arrays.toString(solution(4, stages2)));
+        System.out.println(Arrays.toString(solution(5,stages3)));
 
     }
 }
