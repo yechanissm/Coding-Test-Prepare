@@ -9,7 +9,13 @@ public class 뒤에있는큰수찾기 {
         int[] answer = new int[numbers.length];
         Stack<Integer> stack = new Stack<>();
 
+        for(int i=numbers.length; i>=0; i--) {
 
+            if(stack.isEmpty()) {
+                answer[i] = -1;
+            }
+
+        }
     }
 
     public static void main(String[] args) {
