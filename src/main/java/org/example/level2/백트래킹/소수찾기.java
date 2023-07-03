@@ -26,8 +26,13 @@ public class 소수찾기 {
         int num;
         if(str!="") {
             num = Integer.parseInt(str);
-            if(isPrime)
+            if(isPrime(num)) {
+                set.add(num);
+            }
         }
+    }
+
+    private static boolean isPrime(int num) {
     }
 
     public static void main(String[] args) {
