@@ -14,11 +14,10 @@ public class 소수찾기 {
         visited = new boolean[numbers.length()];
 
         for(int i=0; i<numbers.length(); i++) {
-            arr[i] = numbers.charAt(0);
+            arr[i] = numbers.charAt(i);
         }
         recursion("", 0);
-
-
+        answer = set.size();
         return answer;
     }
 
@@ -30,16 +29,34 @@ public class 소수찾기 {
                 set.add(num);
             }
         }
+        if(index==arr.length) {
+            return;
+        }
+        for(int i=0; i<arr.length; i++) {
+            if(visited[i]) {
+                continue;
+            }
+            visited[i] = true;
+            recursion(str+arr[i], index+1);
+            visited[i] = false;
+        }
     }
 
     private static boolean isPrime(int num) {
+        if(num==0 || num==1) {
+            return false;
+        }
+        for(int i=2; i*i <=num; i++) {
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-        String numbers1 = "17";
         String numbers2 = "011";
 
-        System.out.println(solution(numbers1));
         System.out.println(solution(numbers2));
     }
 }
