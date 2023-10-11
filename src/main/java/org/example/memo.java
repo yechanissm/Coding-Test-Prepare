@@ -5,7 +5,11 @@ import java.util.Arrays;
 
 public class memo {
     public static void main(String[] args) {
-        int a = 6789;
-        System.out.println(8/10);
+        char c = 'z';
+        char result;
+        int d = (int)c;
+        System.out.println(d);
+
+
     }
 }
