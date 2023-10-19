@@ -2,7 +2,7 @@ package org.example.difficult2;
 
 import java.util.Scanner;
 
-public class 패턴마디의길이 {
+public class 패턴마디의길이_무조건다시풀기 {
 
     public static void main(String[] args) {
 
@@ -12,11 +12,12 @@ public class 패턴마디의길이 {
         for(int test_case = 1; test_case <= T; test_case++)
         {
             String answer = sc.next();
+            int len = 0;
             for(int i=1; i<answer.length(); i++) {
                 String b = answer.substring(0,i);
                 String c = answer.substring(i,i+i);
                 if(b.equals(c)) {
-                    System.out.println(b.length());
+                    len = b.length();
                     break;
                 }
             }
